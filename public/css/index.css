@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(47, 49, 54);
+}
+.login-form {
+    width: 600px;
+    height: 450px;
+    border-radius: 3px;
+    padding: 2rem 5rem 5rem 5rem;
+    margin: 4rem auto 0 auto;
+    background-color: #d1d4d6;
+    box-shadow: 0 0 1em #797d81;
+}
+
+.inputs-login input{
+    margin-top: 0.8rem;
+}
+
+h1 {
+    color: #3b3d3f;
+}
+
+.buttons-login {
+    margin-top: 3rem;
+}
+
+.buttons-login button{
+    width: 100%;
+    margin-top: 0.3rem;
+}

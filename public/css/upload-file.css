@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(47, 49, 54);
+}
+
+.upload-content {
+    width: 900px;
+    height: 400px;
+    background-color: #d1d4d6;
+    box-shadow: 0 0 1em #797d81;
+    margin: 2rem auto;
+}
+
+.upload-content form {
+    padding: 3rem;
+}
+
+.buttons-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons-form .btn-primary{
+    margin-right: .8rem;
+}

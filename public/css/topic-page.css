@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(47, 49, 54);
+}
+
+main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.main-content {
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+}
+
+.main-content h4 {
+    margin-bottom: 1.5rem;
+}
+
+.body-upload-content {
+    background-color: rgb(32, 34, 37);
+    color: rgb(226, 227, 229);
+    padding: 1rem;
+    border-radius: 10px;
+    display: grid;
+}
+
+.body-upload-content button {
+    width: 100px;
+    margin-top: 1rem;
+}
+
+span {
+    padding-bottom: 1rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+h5 {
+    margin-top: .8rem;
+}
+
+.comment-content {
+    margin-top: 1rem;
+    background-color: rgb(32, 34, 37);
+    color: rgb(226, 227, 229);
+    padding: 1rem;
+    border-radius: 10px;
+    display: grid;
+}
+
+.action-links a{
+    text-decoration: none;
+    padding-right: .7rem;
+}
+
+.action-links #delete-comment {
+    color: rgb(255, 0, 0);
+}
+
+.action-links #edit-comment {
+    color: rgb(148, 143, 143);
+}
+
+form {
+    display: inline;
+}
+
+form label {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+form button {
+    margin-bottom: 4rem;
+}
+
+.edit-comment button {
+    margin-bottom: 0;
+    margin-right: .6rem;
+}
+

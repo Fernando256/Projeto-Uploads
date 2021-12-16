@@ -1,0 +1,35 @@
+{
+  "name": "projeto-upload",
+  "version": "1.0.0",
+  "description": "Projeto-Upload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon -e ts,json,mustache src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernando256/Projeto-Uploads.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernando256/Projeto-Uploads/issues"
+  },
+  "homepage": "https://github.com/Fernando256/Projeto-Uploads#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mustache-express": "^1.3.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/mustache-express": "^1.2.1",
+    "@types/node": "^16.11.13",
+    "@types/sequelize": "^4.28.10"
+  }
+}

@@ -1,0 +1,35 @@
+{{>partials/header}}
+<head>
+    <link rel="stylesheet" href="/css/list-page.css">
+</head>
+<body>
+    {{>partials/navbar}}
+    <div class="list-content">
+        <div class="filters">
+            <nav class="navbar navbar-light bg-dark">            
+                <div class="container-fluid">
+                    <div class="sort">
+                        <h4>Pesquisar e ordenar:</h4>
+                        <form class="d-flex" class="sort-form">
+                            <input class="form-control me-2" id ="search" type="search" name="pesquisar" placeholder="Pesquisar" aria-label="Search">
+                            <select class="form-select" name="ordenar" required>   
+                                <option value="data">Data</option>
+                                <option value="ordenacao">Alfabeticamente</option>
+                            </select>
+                            <button class="btn btn-outline-light" type="submit">Filtrar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="config-buttons">
+            <a href="upload-file" ><button type="button" class="btn btn-primary" id="new-upload">Novo upload</button></a>
+            <a href="uploads/meus-uploads"><button type="button" class="btn btn-info">Meus Uploads</button></a>
+        </div>
+        <a href="/upload/1">
+            <div class="upload-block">
+                <h3>Teste Upload</h3>
+            </div>
+        </a>
+    </div>
+{{>partials/footer}}

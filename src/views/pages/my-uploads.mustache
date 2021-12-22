@@ -1,0 +1,37 @@
+{{>partials/header}}
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="/css/list-page.css">
+</head>
+<body>
+    <div class="list-content">
+        <div class="filters">
+            <nav class="navbar navbar-light bg-dark">            
+                <div class="container-fluid">
+                    <div class="sort">
+                        <h4>Filtrar:</h4>
+                        <form action="" class="sort-form">
+                            <input type="text" class="form-select" id="date-range" name="daterange" value="" />
+                            <button class="btn btn-outline-light" type="submit">Filtrar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="config-buttons">
+            <a href="/upload-file" ><button type="button" class="btn btn-primary" id="new-upload">Novo upload</button></a>
+            <a href="/uploads"><button type="button" class="btn btn-info">Uploads da comunidade</button></a>
+        </div>
+        <a href="/upload/1">
+            <div class="upload-block">
+                <h3>Titulo Descricao</h3>
+            </div>
+        </a>
+    </div>
+
+    <script src="/js/list-page.js"></script>
+</body>
+{{>partials/footer}}

@@ -5,6 +5,8 @@ import * as ListPageController from '../controllers/listPageController';
 import * as UploadFileController from '../controllers/uploadFileController';
 import * as TopicController from '../controllers/topicController';
 import * as MyUploadsController from '../controllers/myUploadsController';
+import { privateRoute } from '../config/passport';
+import { upload } from '../middlewares/upload';
 
 const router = Router();
 
@@ -12,15 +14,19 @@ router.get('/', (req: Request, res: Response) => {
     res.redirect('/login');
 });
 
-router.get('/login', LoginController.login);
-router.get('/registrar', RegisterController.registerUser);
+router.get('/login', LoginController.loginPage);
+router.post('/login', LoginController.loginAction);
 
-router.get('/uploads', ListPageController.listContent);
+router.get('/registrar', RegisterController.registerUserPage);
+router.post('/registrar', RegisterController.registerUserAction);
 
-router.get('/upload-file', UploadFileController.uploadFile);
+router.get('/uploads', privateRoute, ListPageController.listContent);
 
-router.get('/upload/1', TopicController.topicUpload);
+router.get('/upload-file' ,UploadFileController.uploadFile);
+router.post('/upload-file', privateRoute, upload.single('upload-file') ,UploadFileController.uploadFormFile);
 
-router.get('/uploads/meus-uploads', MyUploadsController.myUploadsListed)
+router.get('/upload/1', privateRoute,TopicController.topicUpload);
+
+router.get('/uploads/meus-uploads', privateRoute, MyUploadsController.myUploadsListed)
 
 export default router;

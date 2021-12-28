@@ -4,16 +4,16 @@
 </head>
     {{>partials/navbar}}
 <div class="upload-content">
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="/upload-file" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Título</label>
-            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título" required>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Título" required>
             </div>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-            <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
             </div>
-        <input type="file" name="upload-arquivo" id="upload-arquivo" required>
+        <input type="file" name="upload-file" id="upload-file" required>
         <div class="buttons-form">
             <button type="submit" class="btn btn-primary">Fazer Upload</button>
             <a href="/uploads"><button type="button" class="btn btn-secondary">Cancelar Upload</button></a>

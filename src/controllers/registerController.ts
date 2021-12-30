@@ -1,4 +1,4 @@
-import { Request, Response} from 'express';
+import { Request, Response } from 'express';
 import * as AccountService from '../services/AccountService';
 
 export const registerUserPage = (req: Request, res: Response) => {
@@ -6,16 +6,21 @@ export const registerUserPage = (req: Request, res: Response) => {
 }
 
 export const registerUserAction = async (req: Request, res: Response) => {
-    let { name, email, password } = req.body;
-    if (name && email && password) {
+    const user: AccountService.UserParams = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+    }
+
+    if (user.name && user.email && user.password) {
         try {
-            const newUser = await AccountService.createUser(name, email, password);
+            const newUser = await AccountService.createUser(user);
             if (newUser instanceof Error) 
-                res.send({success: false, message: 'Something is wrong in your data, try again!'});
+                res.send({success: false, message: 'There is something wrong in your data, try again!'});
             else 
                 res.json({success: true});            
         }catch(e) {
-            console.log('Algo deu errado: ', e);
+            console.log(e);
         }
     } else
         res.redirect('/registrar');

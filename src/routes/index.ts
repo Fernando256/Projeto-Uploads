@@ -22,7 +22,7 @@ router.post('/registrar', RegisterController.registerUserAction);
 
 router.get('/uploads', privateRoute, ListPageController.listContent);
 
-router.get('/upload-file' ,UploadFileController.uploadFile);
+router.get('/upload-file' ,UploadFileController.uploadFilePage);
 router.post('/upload-file', privateRoute, upload.single('upload-file') ,UploadFileController.uploadFormFile);
 
 router.get('/upload/1', privateRoute,TopicController.topicUpload);

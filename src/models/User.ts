@@ -2,10 +2,10 @@ import { Model, DataTypes} from 'sequelize';
 import {sequelize} from '../instances/mysql';
 
 export interface UserInstance extends Model {
-    id_user: number;
     name: string;
     email: string;
     password: string;
+    id_user?: number;
 }
 
 export const User = sequelize.define<UserInstance>('User', {

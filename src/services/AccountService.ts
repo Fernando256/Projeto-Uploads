@@ -4,18 +4,24 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const createUser = async (name: string, email: string, password: string) => {
+export interface UserParams {
+    name: string,
+    email: string,
+    password: string
+}
+
+export const createUser = async (user: UserParams) => {
     const hasUser = await User.findOne({
         where: {
-            email
+            email: user.email
         }
     });
     if (!hasUser) {
         try {
-            const hash = bcrypt.hashSync(password, parseInt(process.env.SALT_ROUNDS as string));
+            const hash = bcrypt.hashSync(user.password, parseInt(process.env.SALT_ROUNDS as string));
             const newUser = await User.create({
-                name,
-                email,
+                name: user.name,
+                email: user.email,
                 password: hash
             });
             return newUser;
@@ -23,7 +29,7 @@ export const createUser = async (name: string, email: string, password: string) 
             console.log(e);
         }
     } else
-        return new Error('Email existente!');
+        return new Error('The email already exist!');
 }
 
 export const matchPassword = (passwordText: string, passwordEncrypted: string) => {

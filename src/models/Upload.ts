@@ -10,7 +10,7 @@ export interface UploadInstance extends Model {
     id_user: number;
 }
 
-export const User = sequelize.define<UploadInstance>('Upload', {
+export const Upload = sequelize.define<UploadInstance>('Upload', {
     id_upload: {
         primaryKey: true,
         autoIncrement: true,
@@ -24,7 +24,7 @@ export const User = sequelize.define<UploadInstance>('Upload', {
     },
     date_upload: {
         type: DataTypes.DATE,
-        defaultValue: Date.now()
+        defaultValue: new Date(Date.now())
     },
     ext_archive: {
         type: DataTypes.STRING
@@ -37,6 +37,6 @@ export const User = sequelize.define<UploadInstance>('Upload', {
         }
     }
 }, {
-    tableName: 'comments',
+    tableName: 'uploads',
     timestamps: false
 });

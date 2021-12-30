@@ -36,7 +36,7 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
         res.json({error: err.code});
     else {
         console.log(err);
-        res.json({error: 'Something is wrong.'});
+        res.json({error: 'There is something wrong.'});
     }
 }
 

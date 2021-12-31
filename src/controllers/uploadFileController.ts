@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import * as UploadService from '../services/UploadService';
+import { UserInterface } from '../interfaces/UserInterface';
 
 export const uploadFilePage = (req: Request, res: Response) => {
     res.render('pages/upload-page');
@@ -7,12 +8,7 @@ export const uploadFilePage = (req: Request, res: Response) => {
 
 export const uploadFormFile = async (req: Request, res: Response) => {
     let file  = req.file as Express.Multer.File;
-    let user = req.user as {
-        id_user: number,
-        name: string,
-        email: string,
-        password: string
-    };
+    let user = req.user as UserInterface;
 
     try {
         const uploadTopic: UploadService.UploadInstance = {

@@ -27,6 +27,6 @@ router.post('/upload-file', privateRoute, upload.single('upload-file') ,UploadFi
 
 router.get('/upload/1', privateRoute,TopicController.topicUpload);
 
-router.get('/uploads/meus-uploads', privateRoute, MyUploadsController.myUploadsListed)
+router.get('/uploads/meus-uploads', privateRoute, MyUploadsController.myUploadsListed);
 
 export default router;

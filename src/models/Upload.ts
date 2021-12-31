@@ -26,7 +26,7 @@ export const Upload = sequelize.define<UploadInstance>('Upload', {
         type: DataTypes.DATE,
         defaultValue: new Date(Date.now())
     },
-    ext_archive: {
+    file_name: {
         type: DataTypes.STRING
     },
     id_user: {

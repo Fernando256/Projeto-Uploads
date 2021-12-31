@@ -18,7 +18,7 @@ export const uploadFormFile = async (req: Request, res: Response) => {
         const uploadTopic: UploadService.UploadInstance = {
             title: req.body.title,
             description: req.body.description,
-            extensionType: (file.originalname.substring(file.originalname.lastIndexOf('.'))),
+            fileName: file.filename,
             dateUpload: new Date(Date.now()),
             idUser: user.id_user
         }
@@ -30,5 +30,4 @@ export const uploadFormFile = async (req: Request, res: Response) => {
     }catch(e) {
         console.log(e);
     }
-
 }

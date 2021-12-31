@@ -30,9 +30,14 @@ server.use((req, res) => {
 });
 
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
-    res.status(400); //Bad Request
+    if (err.status)
+        res.status(err.status);
+    else
+        res.status(400); // Bad Request
 
-    if (err instanceof MulterError)
+    if (err.message)
+        res.json({error : err.message});
+    else if (err instanceof MulterError)
         res.json({error: err.code});
     else {
         console.log(err);

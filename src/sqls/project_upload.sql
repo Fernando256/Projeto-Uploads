@@ -16,7 +16,7 @@ CREATE TABLE project_upload.uploads (
 	title VARCHAR(255) NOT NULL,
 	description TEXT NULL,
 	date_upload TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	ext_archive varchar(100) NOT NULL,
+	file_name varchar(100) NOT NULL,
 	id_user INT NOT NULL,
 	CONSTRAINT uploads_PK PRIMARY KEY (id_upload)
 )

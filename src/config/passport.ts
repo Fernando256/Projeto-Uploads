@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 
 dotenv.config();
 
-const notAuthorizedJson = { status: 401, message: 'Não autorizado' };
+const notAuthorizedJson = { status: 401, message: 'Not authorized' };
 
 const options = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),

@@ -7,8 +7,8 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         let extensionName = file.originalname.substring(file.originalname.lastIndexOf('.'));
-        
-        cb(null, '1' + extensionName); // '1' will be modified to id_upload
+        let uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + extensionName);
     }
 });
 

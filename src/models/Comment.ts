@@ -8,7 +8,7 @@ export interface CommentInstance extends Model {
     id_user: number;
 }
 
-export const Upload = sequelize.define<CommentInstance>('Comment', {
+export const Comment = sequelize.define<CommentInstance>('Comment', {
     id_comment: {
         primaryKey: true,
         autoIncrement: true,

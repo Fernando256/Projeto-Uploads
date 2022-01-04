@@ -25,7 +25,9 @@ router.get('/uploads', privateRoute, ListPageController.listContent);
 router.get('/upload-file' ,UploadFileController.uploadFilePage);
 router.post('/upload-file', privateRoute, upload.single('upload-file') ,UploadFileController.uploadFormFile);
 
-router.get('/upload/:idUpload', privateRoute,TopicController.topicUploadPage);
+router.get('/upload/:idUpload', privateRoute, TopicController.topicUploadPage);
+router.post('/upload/:idUpload', privateRoute, TopicController.addTopicComment);
+router.delete('/upload/:idUpload/deletar/:idComment', privateRoute, TopicController.deleteComment);
 
 router.get('/uploads/meus-uploads', privateRoute, MyUploadsController.myUploadsListed);
 

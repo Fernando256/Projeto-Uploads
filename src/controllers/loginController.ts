@@ -2,10 +2,6 @@ import { Request, Response} from 'express';
 import * as AccountService from '../services/AccountService';
 import { generateToken } from '../config/passport';
 
-export const loginPage = (req: Request, res: Response) => {
-    res.render('pages/login');
-}
-
 export const loginAction = async (req: Request, res: Response) => {
     let {email, password} = req.body;
     if (email && password) {

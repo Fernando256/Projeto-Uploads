@@ -1,10 +1,6 @@
 import { Request, Response } from 'express';
 import * as AccountService from '../services/AccountService';
 
-export const registerUserPage = (req: Request, res: Response) => {
-    res.render('pages/register');
-}
-
 export const registerUserAction = async (req: Request, res: Response) => {
     const user: AccountService.UserParams = {
         name: req.body.name,

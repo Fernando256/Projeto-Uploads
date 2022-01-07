@@ -1,5 +1,6 @@
 export interface CommentInterface {
-    comment: string,
-    idUpload: number,
-    idUser: number
+    idUser: number,
+    idUpload?: number,
+    idComment?: number,
+    comment?: string,
 }

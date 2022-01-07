@@ -13,9 +13,10 @@ export const topicUploadPage = async (req: Request, res: Response) => {
             let commentTopic = await TopicService.listCommentTopic(idUpload);
             res.json({userId: user.id_user, uploadTopic: topic, comments: commentTopic});
         } else
-            throw new Error('Topic is not found!');
+            res.json({success: false, message: 'Topic is not found!'});
     } else
-        throw new Error('Id Upload is not valid!');        
+        res.json({success: false, message: 'Id Upload is not valid!'});
+    
 }
 
 export const addComment = async (req: Request, res: Response) => {

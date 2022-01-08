@@ -9,7 +9,7 @@ export const myUploadsListed = async (req: Request, res: Response) => {
         limit: 10,
         offset: 0
     }
-    const uploads = await ListUploads.listAllUploadsByUser(user.id_user, pagination);
+    const uploads = await ListUploads.listAllUploadsByUser(user.id_user as number, pagination);
 
     res.json({userId: user.id_user, uploads});
 }

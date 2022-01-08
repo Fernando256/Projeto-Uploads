@@ -23,7 +23,7 @@ export const addComment = async (req: Request, res: Response) => {
     let user = req.user as UserInterface;
     let commentStructure: CommentInterface = {
         comment: req.body.comment,
-        idUser: user.id_user,
+        idUser: user.id_user as number,
         idUpload: parseInt(req.params.idUpload)
     }
     try {
@@ -41,7 +41,7 @@ export const deleteComment = async (req: Request, res: Response) => {
     let user = req.user as UserInterface;
     let comment: CommentInterface= {
         idComment: parseInt(req.params.idComment),
-        idUser: user.id_user
+        idUser: user.id_user as number
     }
     try {
         const removeComment = await TopicService.deleteTopicComment(comment);
@@ -58,7 +58,7 @@ export const editComment = async (req: Request, res: Response) => {
     const user = req.user as UserInterface;
     let comment: CommentInterface = {
         idComment: parseInt(req.params.idComment),
-        idUser: user.id_user,
+        idUser: user.id_user as number,
         comment: req.body.editComment,
     }
     try {

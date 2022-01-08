@@ -1,6 +1,6 @@
 CREATE DATABASE `project_upload` COLLATE utf8_general_ci;
 
-CREATE TABLE project_upload.comments (
+CREATE TABLE comments (
 	id_comment INT auto_increment NOT NULL,
 	comment TEXT NOT NULL,
 	id_upload INT NOT NULL,
@@ -11,7 +11,7 @@ ENGINE=InnoDB
 DEFAULT CHARSET=utf8
 COLLATE=utf8_general_ci;
 
-CREATE TABLE project_upload.uploads (
+CREATE TABLE uploads (
 	id_upload INT auto_increment NOT NULL,
 	title VARCHAR(255) NOT NULL,
 	description TEXT NULL,
@@ -24,7 +24,7 @@ ENGINE=InnoDB
 DEFAULT CHARSET=utf8
 COLLATE=utf8_general_ci;
 
-CREATE TABLE project_upload.users (
+CREATE TABLE users (
 	id_user INT auto_increment NOT NULL,
 	name varchar(100) NOT NULL,
 	email varchar(100) NOT NULL,

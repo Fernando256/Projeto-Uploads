@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
+import { UserInterface } from '../interfaces/UserInterface';
 import * as AccountService from '../services/AccountService';
 
 export const registerUserAction = async (req: Request, res: Response) => {
-    const user: AccountService.UserParams = {
+    const user: UserInterface = {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password
@@ -19,5 +20,5 @@ export const registerUserAction = async (req: Request, res: Response) => {
             console.log(e);
         }
     } else
-        res.redirect('/registrar');
+        res.json({success: false, message: 'Somethins is empty in your register action!'});
 }

@@ -13,7 +13,7 @@ export const uploadFormFile = async (req: Request, res: Response) => {
             description: req.body.description,
             fileName: file.filename,
             dateUpload: new Date(Date.now()),
-            idUser: user.id_user
+            idUser: user.id_user as number
         }
         const newUpload = await UploadService.createTopic(uploadTopic);
         if (!(newUpload instanceof Error)) 

@@ -1,16 +1,11 @@
 import { User } from '../models/User';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
+import { UserInterface } from '../interfaces/UserInterface';
 
 dotenv.config();
 
-export interface UserParams {
-    name: string,
-    email: string,
-    password: string
-}
-
-export const createUser = async (user: UserParams) => {
+export const createUser = async (user: UserInterface) => {
     const hasUser = await User.findOne({
         where: {
             email: user.email

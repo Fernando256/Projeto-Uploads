@@ -3,5 +3,6 @@ export interface UploadInterface {
     description: string,
     fileName: string,
     dateUpload: Date,
-    idUser: number
+    idUser: number,
+    idUpload?: number
 }

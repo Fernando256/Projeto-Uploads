@@ -24,13 +24,12 @@ export const Upload = sequelize.define<UploadInstance>('Upload', {
     },
     date_upload: {
         type: DataTypes.DATE,
-        defaultValue: new Date(Date.now())
     },
     file_name: {
         type: DataTypes.STRING
     },
     id_user: {
-        type:DataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
             model: 'User',
             key: 'id_user'

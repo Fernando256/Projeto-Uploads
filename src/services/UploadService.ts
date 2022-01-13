@@ -1,4 +1,4 @@
-import { Upload } from "../models/Upload";
+import  { Upload }  from "../models/Upload";
 import { UploadInterface } from "../interfaces/UploadInterface";
 
 export const createTopic = async (upload: UploadInterface) => {

@@ -1,10 +1,13 @@
 import { UserInterface } from '../interfaces/UserInterface';
 import * as AccountService from './AccountService';
-import { User } from '../models/User';
+import { sequelize } from "../instances/mysql";
+
 
 describe('Testing Account Service', () => {
     beforeAll(async () => {
-        await User.sync({ force: true });
+        await sequelize.sync({force: true}).catch((error) => {
+            console.error(error);
+        });  
     });
 
     let user: UserInterface = {

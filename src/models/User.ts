@@ -25,5 +25,5 @@ export const User = sequelize.define<UserInstance>('User', {
     }
 }, {
     tableName: 'users',
-    timestamps: false
+    timestamps: false,
 });

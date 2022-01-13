@@ -1,5 +1,6 @@
 import { Model, DataTypes} from 'sequelize';
 import {sequelize} from '../instances/mysql';
+import { User } from './User';
 
 export interface UploadInstance extends Model {
     id_upload: number;
@@ -31,7 +32,7 @@ export const Upload = sequelize.define<UploadInstance>('Upload', {
     id_user: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'User',
+            model: User,
             key: 'id_user'
         }
     }

@@ -1,5 +1,7 @@
 import { Model, DataTypes} from 'sequelize';
 import {sequelize} from '../instances/mysql';
+import { Upload } from './Upload';
+import { User } from './User';
 
 export interface CommentInstance extends Model {
     id_comment: number;
@@ -20,16 +22,16 @@ export const Comment = sequelize.define<CommentInstance>('Comment', {
     id_upload: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Upload',
+            model: Upload,
             key: 'id_upload'
         }
     },
     id_user: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'User',
+            model: User,
             key: 'id_user'
-        }
+        },
     }
 }, {
     tableName: 'comments',

@@ -1,11 +1,8 @@
 import { UploadInterface } from "../interfaces/UploadInterface";
 import { UserInterface } from "../interfaces/UserInterface";
 import * as UploadService from './UploadService';
-import { sequelize } from "../instances/mysql";
 import * as AccountService  from './AccountService';
-import { Upload } from "../models/Upload";
-import { User } from "../models/User";
-
+import { sequelize } from "../instances/mysql";
 
 describe('Testing Upload Service', () => {
     beforeAll(async () => {

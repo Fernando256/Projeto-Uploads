@@ -5,7 +5,6 @@ import { sequelize } from "../instances/mysql";
 import { CommentInterface } from '../interfaces/CommentInterface';
 import { UploadInterface } from "../interfaces/UploadInterface";
 import { UserInterface } from "../interfaces/UserInterface";
-import { not } from 'sequelize/dist/lib/operators';
 import { CommentInstance } from '../models/Comment';
 
 

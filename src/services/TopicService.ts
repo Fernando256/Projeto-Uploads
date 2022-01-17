@@ -59,7 +59,7 @@ export const listTopic = async (idUpload: number) => {
 }
 
 export const listCommentTopic = async (idUpload: number) => {
-    return (await Upload.findAll({
+    return (await Comment.findAll({
         where: {
             id_upload: idUpload
         }

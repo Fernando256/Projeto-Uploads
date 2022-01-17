@@ -23,7 +23,7 @@ export const createUser = async (user: UserInterface) => {
         }catch(e) {
             console.log(e);
         }
-    } else
+    } else 
         return new Error('The email already exist!');
 }
 

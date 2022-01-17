@@ -9,7 +9,7 @@ dotenv.config();
 
 const notAuthorizedJson = { status: 401, message: 'Not authorized' };
 
-const options = {
+const options = { 
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET_KEY as string
 }

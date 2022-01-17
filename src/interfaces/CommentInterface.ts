@@ -3,4 +3,4 @@ export interface CommentInterface {
     idUpload?: number,
     idComment?: number,
     comment?: string,
-}
+} 

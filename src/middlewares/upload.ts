@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
         let uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
         cb(null, uniqueSuffix + extensionName);
     }
-});
+}); 
 
 export const upload = multer({
     storage,

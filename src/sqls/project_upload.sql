@@ -21,7 +21,7 @@ CREATE TABLE uploads (
 	CONSTRAINT uploads_PK PRIMARY KEY (id_upload)
 )
 ENGINE=InnoDB
-DEFAULT CHARSET=utf8
+DEFAULT CHARSET=utf8 
 COLLATE=utf8_general_ci;
 
 CREATE TABLE users (

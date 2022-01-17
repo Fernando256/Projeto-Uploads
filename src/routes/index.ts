@@ -26,4 +26,4 @@ router.delete('/upload/:idComment', privateRoute, TopicController.deleteComment)
 
 router.get('/uploads/meus-uploads', privateRoute, MyUploadsController.myUploadsListed);
 
-export default router;
+export default router; 

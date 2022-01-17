@@ -20,7 +20,7 @@ export const Comment = sequelize.define<CommentInstance>('Comment', {
         type: DataTypes.TEXT
     },
     id_upload: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER, 
         references: {
             model: Upload,
             key: 'id_upload'

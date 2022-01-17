@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config(); 
 
 let db = {
     db: process.env.MYSQL_DB as string,
